@@ -47,20 +47,23 @@ nav.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-
 
 /* HERO */
 .hero{min-height:100vh;display:flex;align-items:center;padding:80px 2.5rem 60px;position:relative;overflow:hidden;background:linear-gradient(135deg,#f0f4fa 0%,#e8eef8 50%,#ddeaf8 100%)}
-.hero-mesh{position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(26,86,219,.07) 0%,transparent 70%),radial-gradient(ellipse at 20% 80%,rgba(14,159,159,.07) 0%,transparent 60%);pointer-events:none}
+.hero-mesh{position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(26,86,219,.07),transparent 70%),radial-gradient(ellipse at 20% 80%,rgba(14,159,159,.07),transparent 60%);pointer-events:none}
 .hero-inner{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:1}
+
+/* HERO LEFT */
+.hero-left{}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(26,86,219,.08);border:1px solid rgba(26,86,219,.15);border-radius:30px;padding:6px 16px;font-size:.72rem;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:1px;margin-bottom:1.5rem}
-.hero-eyebrow span{width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0;animation:blink 1.5s infinite}
+.hero-eyebrow .blink-dot{width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0;animation:blink 1.5s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 .hero-left h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4.5vw,3.8rem);font-weight:900;color:var(--text);line-height:1.08;margin-bottom:1rem;letter-spacing:-2px}
 .hero-left h1 span{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .hero-typewriter{font-size:1rem;font-weight:600;color:var(--text2);margin-bottom:.75rem;min-height:1.6em}
-.hero-typewriter .typed{border-right:2px solid var(--blue);padding-right:2px;animation:blink-cur .7s infinite}
+.typed{border-right:2px solid var(--blue);padding-right:2px;animation:blink-cur .7s infinite}
 @keyframes blink-cur{0%,100%{opacity:1}50%{opacity:0}}
 .hero-loc{display:flex;align-items:center;gap:.4rem;color:var(--text2);font-size:.875rem;margin-bottom:1.25rem}
 .hero-tagline{font-style:italic;color:var(--text2);font-size:.9rem;line-height:1.6;border-left:3px solid var(--blue);padding-left:.85rem;margin-bottom:2rem;opacity:.85}
-.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-3d{padding:11px 26px;border-radius:30px;font-weight:700;font-size:.85rem;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;transition:all .3s}
+.hero-btns{display:flex;gap:.85rem;flex-wrap:wrap}
+.btn-3d{padding:11px 24px;border-radius:30px;font-weight:700;font-size:.85rem;text-decoration:none;display:inline-flex;align-items:center;gap:.45rem;transition:all .3s}
 .btn-primary{background:var(--grad);color:#fff;box-shadow:0 8px 24px rgba(26,86,219,.3)}
 .btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(26,86,219,.4)}
 .btn-secondary{background:#fff;color:var(--blue);border:2px solid rgba(26,86,219,.15);box-shadow:var(--shadow)}
@@ -75,12 +78,12 @@ nav.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-
 .profile-avatar-wrap{position:relative}
 .profile-avatar{width:110px;height:110px;border-radius:50%;object-fit:cover;border:4px solid transparent;background:linear-gradient(white,white) padding-box,var(--grad) border-box;box-shadow:0 12px 40px rgba(26,86,219,.2)}
 .profile-status{position:absolute;bottom:4px;right:4px;width:20px;height:20px;border-radius:50%;background:var(--green);border:3px solid white}
-.profile-name{font-family:'Playfair Display',serif;font-weight:800;font-size:1.1rem;color:var(--text);text-align:center;letter-spacing:-.5px}
-.profile-role{font-size:.78rem;font-weight:700;color:var(--blue);text-align:center;background:rgba(26,86,219,.08);padding:4px 14px;border-radius:20px}
+.profile-name{font-family:'Playfair Display',serif;font-weight:800;font-size:1.1rem;color:var(--text);text-align:center;letter-spacing:-.5px;line-height:1.3}
+.profile-role{font-size:.78rem;font-weight:700;color:var(--blue);text-align:center;background:rgba(26,86,219,.08);padding:5px 16px;border-radius:20px}
 .profile-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;width:100%}
 .ps-item{background:rgba(26,86,219,.05);border-radius:12px;padding:.7rem .5rem;text-align:center;border:1px solid rgba(26,86,219,.1)}
 .ps-num{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:block}
-.ps-lbl{font-size:.62rem;font-weight:600;color:var(--text2);display:block;margin-top:2px}
+.ps-lbl{font-size:.6rem;font-weight:700;color:var(--text2);display:block;margin-top:2px;line-height:1.3}
 .profile-tags{display:flex;gap:.4rem;flex-wrap:wrap;justify-content:center}
 .p-tag{padding:4px 12px;border-radius:20px;font-size:.68rem;font-weight:700;background:var(--grad);color:#fff}
 .floating-badge{position:absolute;background:white;border-radius:14px;padding:8px 14px;box-shadow:0 8px 32px rgba(0,0,0,.1);display:flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:700;color:var(--text);animation:float 3s ease-in-out infinite;white-space:nowrap}
@@ -123,36 +126,44 @@ section{padding:80px 2.5rem;position:relative;z-index:1}
 .h-text h4{font-weight:800;font-size:.9rem;color:var(--text);margin-bottom:2px}
 .h-text p{font-size:.78rem;color:var(--text2)}
 
-/* CERTS */
+/* CERTIFICATIONS - 3D FLIP */
 .certs-bg{background:#fff}
 .certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem}
-.cert-flip{height:175px;perspective:1000px;cursor:pointer}
-.cert-flip-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.4,0,.2,1)}
-.cert-flip:hover .cert-flip-inner{transform:rotateY(180deg)}
-.cert-front,.cert-back{position:absolute;inset:0;backface-visibility:hidden;border-radius:22px;padding:1.5rem;display:flex;flex-direction:column;justify-content:space-between}
+.cert-flip{height:185px;perspective:1000px;cursor:pointer}
+.cert-flip-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .65s cubic-bezier(.4,0,.2,1)}
+.cert-flip:hover .cert-flip-inner,
+.cert-flip.flipped .cert-flip-inner{transform:rotateY(180deg)}
+.cert-front,.cert-back{
+  position:absolute;top:0;left:0;right:0;bottom:0;
+  backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  border-radius:22px;padding:1.5rem;
+  display:flex;flex-direction:column;justify-content:space-between;
+}
 .cert-front{background:#fff;box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden}
 .cert-front::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad)}
-.cert-back{background:var(--grad);color:#fff;transform:rotateY(180deg);align-items:center;justify-content:center;text-align:center}
-.cert-front .ci{font-size:1.8rem;margin-bottom:.4rem}
+.cert-back{background:var(--grad);color:#fff;transform:rotateY(180deg);align-items:center;justify-content:center;text-align:center;gap:.6rem}
+.cert-front .ci{font-size:1.8rem;margin-bottom:.4rem;display:block}
 .cert-front h4{font-weight:800;font-size:.85rem;color:var(--text);line-height:1.3;margin-bottom:.3rem}
 .cert-front .iss{color:var(--text2);font-size:.72rem}
-.cbadge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:.65rem;font-weight:800;background:var(--blue);color:#fff}
+.cbadge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:.65rem;font-weight:800;background:var(--blue);color:#fff;margin-top:4px}
 .cbadge.og{background:var(--amber)}
-.cert-back i{font-size:2rem;opacity:.3;margin-bottom:.75rem}
-.cert-back h4{font-size:.95rem;font-weight:800;margin-bottom:.4rem}
-.cert-back p{font-size:.75rem;opacity:.85}
+.cert-back i{font-size:2rem;opacity:.25;display:block;margin-bottom:.5rem}
+.cert-back h4{font-size:.95rem;font-weight:800;margin-bottom:.35rem}
+.cert-back p{font-size:.75rem;opacity:.88;line-height:1.4}
 
-/* TIMELINE */
+/* TIMELINE - MOBILE FIXED */
 .journey-bg{background:linear-gradient(180deg,var(--bg) 0%,#fff 100%)}
-.timeline-3d{position:relative;max-width:880px;margin:0 auto}
-.tl-line{position:absolute;left:50%;top:0;bottom:0;width:3px;background:var(--grad);transform:translateX(-50%);border-radius:4px}
+.timeline-wrap{position:relative;max-width:880px;margin:0 auto}
+.tl-center-line{position:absolute;left:50%;top:0;bottom:0;width:3px;background:var(--grad);transform:translateX(-50%);border-radius:4px}
+/* Desktop zigzag */
 .tl-item{display:grid;grid-template-columns:1fr 56px 1fr;margin-bottom:2.5rem;align-items:start}
-.tl-center{display:flex;justify-content:center;padding-top:1.1rem;position:relative;z-index:2}
-.tl-dot{width:16px;height:16px;border-radius:50%;background:var(--blue);border:4px solid #fff;box-shadow:0 0 0 3px var(--blue)}
-.tl-dot.cur{background:var(--green);box-shadow:0 0 0 3px var(--green),0 0 20px rgba(16,185,129,.3)}
+.tl-dot-wrap{display:flex;justify-content:center;padding-top:1.1rem;position:relative;z-index:2}
+.tl-dot{width:16px;height:16px;border-radius:50%;background:var(--blue);border:4px solid #fff;box-shadow:0 0 0 3px var(--blue);flex-shrink:0}
+.tl-dot.cur{background:var(--green);box-shadow:0 0 0 3px var(--green),0 0 16px rgba(16,185,129,.3)}
 .tl-card{background:#fff;border-radius:22px;padding:1.5rem 1.75rem;box-shadow:var(--shadow);border:1px solid var(--border);margin:0 .5rem;transition:all .4s;cursor:pointer;position:relative;overflow:hidden}
 .tl-card::before{content:'';position:absolute;top:0;left:0;bottom:0;width:4px;background:var(--grad)}
-.tl-right .tl-card::before{left:auto;right:0}
+.tl-right .tl-card::before{left:auto;right:0;border-radius:0 4px 4px 0}
+.tl-left .tl-card::before{border-radius:4px 0 0 4px}
 .tl-card:hover{transform:translateY(-5px);box-shadow:var(--shadow2)}
 .tl-card.cur-card{border-color:rgba(16,185,129,.25)}
 .tl-card.cur-card::before{background:var(--green)}
@@ -177,7 +188,7 @@ section{padding:80px 2.5rem;position:relative;z-index:1}
 .sc-title i{color:var(--blue)}
 .sk-item{margin-bottom:1.1rem}
 .sk-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
-.sk-name{font-size:.78rem;font-weight:700;color:var(--text);display:flex;align-items:center;gap:4px}
+.sk-name{font-size:.78rem;font-weight:700;color:var(--text)}
 .sk-pct{font-size:.72rem;font-weight:800;color:var(--blue);background:rgba(26,86,219,.08);padding:1px 7px;border-radius:8px}
 .sk-bar{background:var(--bg2);border-radius:10px;height:7px;overflow:hidden}
 .sk-fill{height:100%;border-radius:10px;background:var(--grad);width:0;transition:width 1.5s cubic-bezier(.4,0,.2,1)}
@@ -265,7 +276,7 @@ section{padding:80px 2.5rem;position:relative;z-index:1}
 .con-sub{color:rgba(255,255,255,.6);font-size:.9rem;margin-bottom:2.25rem}
 .con-btns{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-bottom:1.1rem}
 .con-links{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
-.cpill{padding:12px 24px;border-radius:30px;border:1.5px solid rgba(255,255,255,.25);color:#fff;text-decoration:none;font-weight:700;font-size:.85rem;display:flex;align-items:center;gap:.5rem;transition:all .3s;background:rgba(255,255,255,.08)}
+.cpill{padding:12px 22px;border-radius:30px;border:1.5px solid rgba(255,255,255,.25);color:#fff;text-decoration:none;font-weight:700;font-size:.83rem;display:flex;align-items:center;gap:.5rem;transition:all .3s;background:rgba(255,255,255,.08)}
 .cpill:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.5);transform:translateY(-3px)}
 .cpill.solid{background:#fff;color:var(--blue);border-color:#fff}
 .cpill.solid:hover{background:#f0f6ff;transform:translateY(-3px)}
@@ -291,25 +302,32 @@ footer{background:#0d1117;color:rgba(255,255,255,.4);text-align:center;padding:1
 
 /* ===== RESPONSIVE ===== */
 @media(max-width:1024px){
-  .hero-inner{grid-template-columns:1fr;gap:3rem}
-  .hero-right{order:-1}
-  .profile-3d-wrap{width:280px}
+  .hero-inner{grid-template-columns:1fr;gap:2.5rem;text-align:center}
+  .hero-right{order:1;justify-content:center}
+  .hero-left{order:2}
+  .hero-eyebrow{margin:0 auto 1.25rem}
+  .hero-loc{justify-content:center}
+  .hero-tagline{text-align:left}
+  .hero-btns{justify-content:center}
+  .profile-3d-wrap{width:300px}
+  /* Show card on mobile but hide duplicate name below */
   .about-grid{grid-template-columns:1fr}
   .skills-grid-3d{grid-template-columns:1fr 1fr}
   .focus-grid{grid-template-columns:1fr 1fr}
   .hob-grid{grid-template-columns:repeat(3,1fr)}
   .rm-card.s4{grid-column:span 2}
 }
+
 @media(max-width:768px){
   .nav-links{display:none}.hamburger{display:flex}
   nav{padding:0 1.25rem}
   section{padding:55px 1.25rem}
   .hero{padding:75px 1.25rem 50px;min-height:auto}
-  .hero-inner{grid-template-columns:1fr;gap:2rem;text-align:center}
-  .hero-right{display:flex;justify-content:center}
-  .hero-left{order:2}
+  /* Mobile hero: card first, then ONLY eyebrow+typewriter+loc+tagline+btns — NO duplicate name */
+  .hero-left h1{display:none}  /* hide big name on mobile since card already shows it */
+  .hero-left{order:2;text-align:center}
   .hero-right{order:1}
-  .hero-eyebrow{margin:0 auto 1.25rem}
+  .hero-eyebrow{margin:0 auto 1rem;display:inline-flex}
   .hero-loc{justify-content:center}
   .hero-tagline{text-align:left}
   .hero-btns{justify-content:center}
@@ -318,13 +336,15 @@ footer{background:#0d1117;color:rgba(255,255,255,.4);text-align:center;padding:1
   .profile-avatar{width:90px;height:90px}
   .floating-badge{display:none}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
+  /* TIMELINE MOBILE FIX */
+  .tl-center-line{left:20px}
+  .tl-item{grid-template-columns:40px 1fr!important;gap:0}
+  .tl-item .tl-empty-left,
+  .tl-item .tl-empty-right{display:none!important}
+  .tl-item .tl-card{margin:0 0 0 .5rem!important}
+  .tl-card::before{left:0!important;right:auto!important;border-radius:4px 0 0 4px!important}
+  .tl-dot-wrap{padding-top:1.1rem}
   .skills-grid-3d{grid-template-columns:1fr}
-  .tl-line{left:22px}
-  .tl-item{grid-template-columns:44px 1fr!important}
-  .tl-left-col,.tl-right-col,.tl-empty{display:none!important}
-  .tl-content-col{display:block!important;grid-column:2!important}
-  .tl-center{grid-column:1!important;padding-top:1.1rem}
-  .tl-card::before{left:0!important;right:auto!important}
   .focus-grid{grid-template-columns:1fr 1fr}
   .rm-grid{grid-template-columns:1fr}
   .rm-card.s4{grid-column:1}
@@ -332,13 +352,18 @@ footer{background:#0d1117;color:rgba(255,255,255,.4);text-align:center;padding:1
   .hob-grid{grid-template-columns:repeat(2,1fr)}
   .about-grid{grid-template-columns:1fr}
   .con-btns,.con-links{flex-direction:column;align-items:center}
+  /* Cert flip on mobile - tap to flip */
+  .cert-flip{height:auto;min-height:160px}
 }
+
 @media(max-width:480px){
   .stats-grid{grid-template-columns:repeat(2,1fr)}
   .ach-grid{grid-template-columns:1fr}
   .hob-grid{grid-template-columns:repeat(2,1fr)}
   .certs-grid{grid-template-columns:1fr}
   .focus-grid{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column;align-items:center}
+  .btn-3d{width:100%;justify-content:center;max-width:280px}
 }
 </style>
 </head>
@@ -350,12 +375,17 @@ footer{background:#0d1117;color:rgba(255,255,255,.4);text-align:center;padding:1
 <nav id="navbar">
   <div class="nav-logo">BSA</div>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li><li><a href="#certifications">Certs</a></li>
-    <li><a href="#journey">Journey</a></li><li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li><li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#connect" class="nav-cta">Connect</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="#about" onclick="closeMenu()">About</a>
@@ -367,21 +397,11 @@ footer{background:#0d1117;color:rgba(255,255,255,.4);text-align:center;padding:1
   <a href="#connect" onclick="closeMenu()">Connect</a>
 </div>
 
+<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-mesh"></div>
   <div class="hero-inner">
-    <div class="hero-left">
-      <div class="hero-eyebrow"><span></span> Available for New Opportunities</div>
-      <h1>Bhavesh<br><span>Shrinivas</span><br>Achugatla</h1>
-      <div class="hero-typewriter"><span class="typed" id="typed"></span></div>
-      <p class="hero-loc"><i class="fas fa-map-marker-alt" style="color:var(--blue)"></i>&nbsp;Thane, Maharashtra, India</p>
-      <p class="hero-tagline">"Turning data into financial insights that drive smarter business decisions."</p>
-      <div class="hero-btns">
-        <a href="#connect" class="btn-3d btn-primary"><i class="fas fa-envelope"></i> Let's Connect</a>
-        <a href="https://drive.google.com/file/d/1iwYGzq6BqrQHB3rqVghAkifOyjKICOOQ/view?usp=drive_link" target="_blank" class="btn-3d btn-secondary"><i class="fas fa-file-pdf"></i> View Resume</a>
-        <a href="https://www.linkedin.com/in/bhavesh-achugatla-9673a0209" target="_blank" class="btn-3d btn-secondary"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      </div>
-    </div>
+    <!-- RIGHT: 3D Profile Card -->
     <div class="hero-right">
       <div style="position:relative;display:inline-block">
         <div class="profile-3d-wrap" id="tiltWrap">
@@ -394,22 +414,50 @@ footer{background:#0d1117;color:rgba(255,255,255,.4);text-align:center;padding:1
               <div class="profile-name">Bhavesh Shrinivas Achugatla</div>
               <div class="profile-role">FP&amp;A Analyst · NeoSOFT</div>
               <div class="profile-stats">
-                <div class="ps-item"><span class="ps-num">9+</span><span class="ps-lbl">Years Exp.</span></div>
-                <div class="ps-item"><span class="ps-num">3+</span><span class="ps-lbl">MIS Years</span></div>
-                <div class="ps-item"><span class="ps-num">4</span><span class="ps-lbl">Certs</span></div>
+                <div class="ps-item">
+                  <span class="ps-num">9+</span>
+                  <span class="ps-lbl">Years Exp.</span>
+                </div>
+                <div class="ps-item">
+                  <span class="ps-num">3+</span>
+                  <span class="ps-lbl">MIS Analyst</span>
+                </div>
+                <div class="ps-item">
+                  <span class="ps-num">4</span>
+                  <span class="ps-lbl">Certificates</span>
+                </div>
               </div>
               <div class="profile-tags">
-                <span class="p-tag">FP&amp;A</span><span class="p-tag">Power BI</span><span class="p-tag">Excel</span>
+                <span class="p-tag">FP&amp;A</span>
+                <span class="p-tag">Power BI</span>
+                <span class="p-tag">Excel</span>
               </div>
             </div>
           </div>
         </div>
-        <div class="floating-badge fb1"><i class="fas fa-chart-line" style="color:var(--green)"></i> Finance Analytics</div>
+        <div class="floating-badge fb1">
+          <i class="fas fa-chart-line" style="color:var(--green)"></i> Finance Analytics
+        </div>
+      </div>
+    </div>
+    <!-- LEFT: Text -->
+    <div class="hero-left">
+      <div class="hero-eyebrow"><span class="blink-dot"></span> Available for New Opportunities</div>
+      <!-- Desktop: show big name. Mobile: hidden via CSS (card already shows name) -->
+      <h1>Bhavesh<br><span>Shrinivas</span><br>Achugatla</h1>
+      <div class="hero-typewriter"><span class="typed" id="typed"></span></div>
+      <p class="hero-loc"><i class="fas fa-map-marker-alt" style="color:var(--blue)"></i>&nbsp;Thane, Maharashtra, India</p>
+      <p class="hero-tagline">"Turning data into financial insights that drive smarter business decisions."</p>
+      <div class="hero-btns">
+        <a href="#connect" class="btn-3d btn-primary"><i class="fas fa-envelope"></i> Let's Connect</a>
+        <a href="https://drive.google.com/file/d/1iwYGzq6BqrQHB3rqVghAkifOyjKICOOQ/view?usp=drive_link" target="_blank" class="btn-3d btn-secondary"><i class="fas fa-file-pdf"></i> View Resume</a>
+        <a href="https://www.linkedin.com/in/bhavesh-achugatla-9673a0209" target="_blank" class="btn-3d btn-secondary"><i class="fab fa-linkedin"></i> LinkedIn</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- STATS -->
 <div class="stats-section">
   <div class="stats-grid">
     <div class="stat-3d sa d1"><span class="ico">💼</span><span class="num">9+</span><span class="lbl">Years Experience</span></div>
@@ -419,6 +467,7 @@ footer{background:#0d1117;color:rgba(255,255,255,.4);text-align:center;padding:1
   </div>
 </div>
 
+<!-- ABOUT -->
 <section class="about-bg" id="about">
   <div class="container">
     <div class="section-header">
@@ -442,34 +491,85 @@ footer{background:#0d1117;color:rgba(255,255,255,.4);text-align:center;padding:1
   </div>
 </section>
 
+<!-- CERTIFICATIONS -->
 <section class="certs-bg" id="certifications">
   <div class="container">
     <div class="section-header">
       <div class="section-tag sa"><i class="fas fa-certificate"></i> Certifications</div>
       <h2 class="section-title sa">Credentials &amp; <span>Learning Path</span></h2>
-      <p class="section-sub sa">Hover on cards to reveal details</p>
+      <p class="section-sub sa">Tap / Hover on cards to flip &amp; reveal details</p>
     </div>
     <div class="certs-grid">
-      <div class="cert-flip sa d1"><div class="cert-flip-inner"><div class="cert-front"><div class="ci">🤖</div><h4>IBM AI Fundamentals</h4><p class="iss">IBM SkillsBuild</p><span class="cbadge">Completed · 2025</span></div><div class="cert-back"><i class="fas fa-brain"></i><h4>IBM AI Fundamentals</h4><p>Foundations of AI, ML and Deep Learning</p></div></div></div>
-      <div class="cert-flip sa d2"><div class="cert-flip-inner"><div class="cert-front"><div class="ci">⚡</div><h4>Career Essentials in Generative AI</h4><p class="iss">Microsoft &amp; LinkedIn Learning</p><span class="cbadge">Completed · 2025</span></div><div class="cert-back"><i class="fas fa-microchip"></i><h4>Generative AI</h4><p>Practical GenAI skills for business professionals</p></div></div></div>
-      <div class="cert-flip sa d3"><div class="cert-flip-inner"><div class="cert-front"><div class="ci">📊</div><h4>Data Visualization With Power BI</h4><p class="iss">Great Learning Academy</p><span class="cbadge">Completed · May 2025</span></div><div class="cert-back"><i class="fas fa-chart-pie"></i><h4>Power BI</h4><p>Dashboard design, DAX &amp; data storytelling</p></div></div></div>
-      <div class="cert-flip sa d4"><div class="cert-flip-inner"><div class="cert-front"><div class="ci">🎓</div><h4>Professional Data Analyst Certification</h4><p class="iss">Data Analytics Program</p><span class="cbadge og">🔄 Ongoing</span></div><div class="cert-back"><i class="fas fa-graduation-cap"></i><h4>Data Analyst</h4><p>SQL, Python &amp; advanced data analysis</p></div></div></div>
+      <div class="cert-flip sa d1" onclick="flipCert(this)">
+        <div class="cert-flip-inner">
+          <div class="cert-front">
+            <div><span class="ci">🤖</span><h4>IBM AI Fundamentals</h4><p class="iss">IBM SkillsBuild</p></div>
+            <span class="cbadge">Completed · March 2026</span>
+          </div>
+          <div class="cert-back">
+            <i class="fas fa-brain"></i>
+            <h4>IBM AI Fundamentals</h4>
+            <p>Foundations of AI, Machine Learning and Deep Learning concepts</p>
+          </div>
+        </div>
+      </div>
+      <div class="cert-flip sa d2" onclick="flipCert(this)">
+        <div class="cert-flip-inner">
+          <div class="cert-front">
+            <div><span class="ci">⚡</span><h4>Career Essentials in Generative AI</h4><p class="iss">Microsoft &amp; LinkedIn Learning</p></div>
+            <span class="cbadge">Completed · March 2026</span>
+          </div>
+          <div class="cert-back">
+            <i class="fas fa-microchip"></i>
+            <h4>Generative AI</h4>
+            <p>Practical GenAI skills for modern business professionals</p>
+          </div>
+        </div>
+      </div>
+      <div class="cert-flip sa d3" onclick="flipCert(this)">
+        <div class="cert-flip-inner">
+          <div class="cert-front">
+            <div><span class="ci">📊</span><h4>Data Visualization With Power BI</h4><p class="iss">Great Learning Academy</p></div>
+            <span class="cbadge">Completed · May 2025</span>
+          </div>
+          <div class="cert-back">
+            <i class="fas fa-chart-pie"></i>
+            <h4>Power BI</h4>
+            <p>Dashboard design, DAX measures &amp; financial data storytelling</p>
+          </div>
+        </div>
+      </div>
+      <div class="cert-flip sa d4" onclick="flipCert(this)">
+        <div class="cert-flip-inner">
+          <div class="cert-front">
+            <div><span class="ci">🎓</span><h4>Professional Data Analyst Certification</h4><p class="iss">Data Analytics Program</p></div>
+            <span class="cbadge og">🔄 Ongoing</span>
+          </div>
+          <div class="cert-back">
+            <i class="fas fa-graduation-cap"></i>
+            <h4>Data Analyst</h4>
+            <p>SQL, Python &amp; advanced data analysis techniques</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- JOURNEY - MOBILE FIXED -->
 <section class="journey-bg" id="journey">
   <div class="container">
     <div class="section-header">
       <div class="section-tag sa"><i class="fas fa-briefcase"></i> Career</div>
       <h2 class="section-title sa">Professional <span>Journey</span></h2>
     </div>
-    <div class="timeline-3d">
-      <div class="tl-line"></div>
+    <div class="timeline-wrap">
+      <div class="tl-center-line"></div>
 
-      <div class="tl-item" style="grid-template-columns:1fr 56px 1fr">
-        <div class="tl-card cur-card sa left" style="margin:0 .5rem" onclick="toggleTL(this)">
-          <span class="cur-badge"><i class="fas fa-circle" style="font-size:.45rem"></i> Current</span>
+      <!-- NeoSOFT - LEFT -->
+      <div class="tl-item tl-left">
+        <div class="tl-card cur-card sa left" onclick="toggleTL(this)">
+          <span class="cur-badge"><i class="fas fa-circle" style="font-size:.4rem"></i> Current</span>
           <h4>NeoSOFT Technologies Pvt. Ltd.</h4>
           <div class="role">FP&amp;A Analyst</div>
           <div class="period"><i class="far fa-calendar-alt"></i>&nbsp;June 2025 – Present</div>
@@ -484,14 +584,15 @@ footer{background:#0d1117;color:rgba(255,255,255,.4);text-align:center;padding:1
             <li>Leverage AI tools (ChatGPT, Claude, Copilot, Gemini) to enhance financial modelling and automate repetitive tasks.</li>
           </ul></div>
         </div>
-        <div class="tl-center"><div class="tl-dot cur"></div></div>
-        <div></div>
+        <div class="tl-dot-wrap"><div class="tl-dot cur"></div></div>
+        <div class="tl-empty-right"></div>
       </div>
 
-      <div class="tl-item" style="grid-template-columns:1fr 56px 1fr">
-        <div></div>
-        <div class="tl-center"><div class="tl-dot"></div></div>
-        <div class="tl-card sa right" style="margin:0 .5rem" onclick="toggleTL(this)">
+      <!-- Super Bond - RIGHT -->
+      <div class="tl-item tl-right">
+        <div class="tl-empty-left"></div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-card sa right" onclick="toggleTL(this)">
           <h4>Super Bond Adhesive Pvt. Ltd.</h4>
           <div class="role">MIS Executive</div>
           <div class="period"><i class="far fa-calendar-alt"></i>&nbsp;April 2023 – June 2025</div>
@@ -507,8 +608,9 @@ footer{background:#0d1117;color:rgba(255,255,255,.4);text-align:center;padding:1
         </div>
       </div>
 
-      <div class="tl-item" style="grid-template-columns:1fr 56px 1fr">
-        <div class="tl-card sa left" style="margin:0 .5rem" onclick="toggleTL(this)">
+      <!-- Mile Venture - LEFT -->
+      <div class="tl-item tl-left">
+        <div class="tl-card sa left" onclick="toggleTL(this)">
           <h4>Mile Venture Pvt. Ltd.</h4>
           <div class="role">MIS Executive</div>
           <div class="period"><i class="far fa-calendar-alt"></i>&nbsp;June 2022 – April 2023</div>
@@ -520,14 +622,15 @@ footer{background:#0d1117;color:rgba(255,255,255,.4);text-align:center;padding:1
             <li>Streamlined data collection by creating standardized templates, improving reporting turnaround time.</li>
           </ul></div>
         </div>
-        <div class="tl-center"><div class="tl-dot"></div></div>
-        <div></div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-empty-right"></div>
       </div>
 
-      <div class="tl-item" style="grid-template-columns:1fr 56px 1fr">
-        <div></div>
-        <div class="tl-center"><div class="tl-dot"></div></div>
-        <div class="tl-card sa right" style="margin:0 .5rem" onclick="toggleTL(this)">
+      <!-- Need Computers - RIGHT -->
+      <div class="tl-item tl-right">
+        <div class="tl-empty-left"></div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-card sa right" onclick="toggleTL(this)">
           <h4>Need Computers</h4>
           <div class="role">Computer Hardware Technician</div>
           <div class="period"><i class="far fa-calendar-alt"></i>&nbsp;May 2017 – March 2020</div>
@@ -540,8 +643,9 @@ footer{background:#0d1117;color:rgba(255,255,255,.4);text-align:center;padding:1
         </div>
       </div>
 
-      <div class="tl-item" style="grid-template-columns:1fr 56px 1fr">
-        <div class="tl-card sa left" style="margin:0 .5rem" onclick="toggleTL(this)">
+      <!-- Sys Computers - LEFT -->
+      <div class="tl-item tl-left">
+        <div class="tl-card sa left" onclick="toggleTL(this)">
           <h4>Sys Computers</h4>
           <div class="role">Data Entry Operator</div>
           <div class="period"><i class="far fa-calendar-alt"></i>&nbsp;April 2016 – May 2017</div>
@@ -552,13 +656,14 @@ footer{background:#0d1117;color:rgba(255,255,255,.4);text-align:center;padding:1
             <li>Maintained spreadsheets and databases to ensure smooth and accurate business operations.</li>
           </ul></div>
         </div>
-        <div class="tl-center"><div class="tl-dot"></div></div>
-        <div></div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-empty-right"></div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- SKILLS -->
 <section class="skills-bg" id="skills">
   <div class="container">
     <div class="section-header">
@@ -602,6 +707,7 @@ footer{background:#0d1117;color:rgba(255,255,255,.4);text-align:center;padding:1
   </div>
 </section>
 
+<!-- PROJECTS -->
 <section class="projects-bg" id="projects">
   <div class="container">
     <div class="section-header">
@@ -617,7 +723,7 @@ footer{background:#0d1117;color:rgba(255,255,255,.4);text-align:center;padding:1
         </div>
         <div class="proj-body">
           <h4>LevelUp — Personal Life Dashboard</h4>
-          <p>A React-based PWA built from scratch for personal growth and productivity — featuring habit tracking, career goals, achievement milestones, to-do management, and a financial goals tracker. Fully deployed on Vercel with Firebase real-time backend.</p>
+          <p>A React-based PWA built from scratch for personal growth and productivity — featuring habit tracking, career goals, achievement milestones, to-do management, and a financial goals tracker. Deployed on Vercel with Firebase real-time backend.</p>
           <div class="proj-tags"><span class="proj-tag">React</span><span class="proj-tag">Firebase</span><span class="proj-tag">Vercel</span><span class="proj-tag">PWA</span><span class="proj-tag">Habit Tracking</span><span class="proj-tag">Self-Built</span></div>
           <a href="https://bhavesh-dashboard.vercel.app/" target="_blank" class="proj-link"><i class="fas fa-external-link-alt"></i> Open LevelUp App</a>
         </div>
@@ -626,6 +732,7 @@ footer{background:#0d1117;color:rgba(255,255,255,.4);text-align:center;padding:1
   </div>
 </section>
 
+<!-- FOCUS -->
 <section class="focus-bg" id="focus">
   <div class="container">
     <div class="section-header">
@@ -643,6 +750,7 @@ footer{background:#0d1117;color:rgba(255,255,255,.4);text-align:center;padding:1
   </div>
 </section>
 
+<!-- ROADMAP -->
 <section class="roadmap-bg" id="roadmap">
   <div class="container">
     <div class="section-header">
@@ -658,6 +766,7 @@ footer{background:#0d1117;color:rgba(255,255,255,.4);text-align:center;padding:1
   </div>
 </section>
 
+<!-- ACHIEVEMENTS -->
 <section class="ach-bg" id="achievements">
   <div class="container">
     <div class="section-header">
@@ -665,7 +774,7 @@ footer{background:#0d1117;color:rgba(255,255,255,.4);text-align:center;padding:1
       <h2 class="section-title sa">Milestones &amp; <span>Achievements</span></h2>
     </div>
     <div class="ach-grid">
-      <div class="ach-card sa d1"><span class="ach-ico">🎓</span><h4>4 Professional Certifications (3 Done + 1 Ongoing)</h4><span class="ach-year">2024–25</span></div>
+      <div class="ach-card sa d1"><span class="ach-ico">🎓</span><h4>4 Professional Certifications (3 Done + 1 Ongoing)</h4><span class="ach-year">2025–26</span></div>
       <div class="ach-card sa d2"><span class="ach-ico">🤖</span><h4>Implemented Dashboard Automation Systems</h4><span class="ach-year">2024</span></div>
       <div class="ach-card sa d3"><span class="ach-ico">📱</span><h4>Built &amp; Deployed LevelUp Web App on Vercel</h4><span class="ach-year">2025</span></div>
       <div class="ach-card sa d4"><span class="ach-ico">📊</span><h4>9+ Year Multi-domain Career Progression</h4><span class="ach-year">2016–Present</span></div>
@@ -675,6 +784,7 @@ footer{background:#0d1117;color:rgba(255,255,255,.4);text-align:center;padding:1
   </div>
 </section>
 
+<!-- HOBBIES -->
 <section class="hobbies-bg" id="hobbies">
   <div class="container">
     <div class="section-header">
@@ -691,6 +801,7 @@ footer{background:#0d1117;color:rgba(255,255,255,.4);text-align:center;padding:1
   </div>
 </section>
 
+<!-- CONNECT -->
 <section class="connect-bg" id="connect">
   <div class="con-inner">
     <h2 class="con-title">Let's Build Something<br>Together</h2>
@@ -715,32 +826,52 @@ footer{background:#0d1117;color:rgba(255,255,255,.4);text-align:center;padding:1
   <p>© 2026 Bhavesh Shrinivas Achugatla · Crafted with passion &amp; precision</p>
 </footer>
 
-<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fas fa-arrow-up"></i>
+</button>
 
 <script>
-// CURSOR (desktop only)
-var cur=document.getElementById('cursor'),ring=document.getElementById('cursor-ring');
-if(window.innerWidth>768){
+// CURSOR - desktop only
+var isMobile = window.innerWidth <= 768;
+if(!isMobile){
+  var cur=document.getElementById('cursor'),ring=document.getElementById('cursor-ring');
   var mx=0,my=0,rx=0,ry=0;
-  document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;cur.style.left=(mx-6)+'px';cur.style.top=(my-6)+'px';});
-  (function animR(){rx+=(mx-rx-18)*.12;ry+=(my-ry-18)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animR);})();
-  document.querySelectorAll('a,button,.cert-flip,.tl-card,.focus-card').forEach(function(el){
+  document.addEventListener('mousemove',function(e){
+    mx=e.clientX;my=e.clientY;
+    cur.style.left=(mx-6)+'px';cur.style.top=(my-6)+'px';
+  });
+  (function animR(){
+    rx+=(mx-rx-18)*.12;ry+=(my-ry-18)*.12;
+    ring.style.left=rx+'px';ring.style.top=ry+'px';
+    requestAnimationFrame(animR);
+  })();
+  document.querySelectorAll('a,button,.cert-flip,.tl-card,.focus-card,.highlight-card').forEach(function(el){
     el.addEventListener('mouseenter',function(){cur.style.transform='scale(2.5)';ring.style.transform='scale(1.5)';ring.style.borderColor='rgba(26,86,219,.8)';});
     el.addEventListener('mouseleave',function(){cur.style.transform='scale(1)';ring.style.transform='scale(1)';ring.style.borderColor='rgba(26,86,219,.5)';});
   });
 }
 
-// CANVAS BG (desktop only)
-if(window.innerWidth>768){
+// CANVAS BG - desktop only
+if(!isMobile){
   var canvas=document.getElementById('bg-canvas'),ctx=canvas.getContext('2d');
   canvas.width=window.innerWidth;canvas.height=window.innerHeight;
   window.addEventListener('resize',function(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;});
   var pts=[];
-  for(var i=0;i<50;i++)pts.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*1.5+.5,dx:(Math.random()-.5)*.35,dy:(Math.random()-.5)*.35,o:Math.random()*.3+.1});
+  for(var i=0;i<50;i++) pts.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*1.5+.5,dx:(Math.random()-.5)*.35,dy:(Math.random()-.5)*.35,o:Math.random()*.3+.1});
   (function draw(){
     ctx.clearRect(0,0,canvas.width,canvas.height);
-    pts.forEach(function(p){p.x+=p.dx;p.y+=p.dy;if(p.x<0||p.x>canvas.width)p.dx*=-1;if(p.y<0||p.y>canvas.height)p.dy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(26,86,219,'+p.o+')';ctx.fill();});
-    pts.forEach(function(a,i){pts.forEach(function(b,j){if(i>=j)return;var d=Math.hypot(a.x-b.x,a.y-b.y);if(d<100){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.strokeStyle='rgba(26,86,219,'+(0.05*(1-d/100))+')';ctx.lineWidth=.8;ctx.stroke();}});});
+    pts.forEach(function(p){
+      p.x+=p.dx;p.y+=p.dy;
+      if(p.x<0||p.x>canvas.width)p.dx*=-1;
+      if(p.y<0||p.y>canvas.height)p.dy*=-1;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle='rgba(26,86,219,'+p.o+')';ctx.fill();
+    });
+    pts.forEach(function(a,i){pts.forEach(function(b,j){
+      if(i>=j)return;
+      var d=Math.hypot(a.x-b.x,a.y-b.y);
+      if(d<100){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.strokeStyle='rgba(26,86,219,'+(0.05*(1-d/100))+')';ctx.lineWidth=.8;ctx.stroke();}
+    });});
     requestAnimationFrame(draw);
   })();
 }
@@ -764,20 +895,27 @@ window.addEventListener('scroll',function(){
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
 function closeMenu(){document.getElementById('mobileMenu').classList.remove('open')}
 
+// CERT FLIP - works on both tap(mobile) and hover(desktop)
+function flipCert(el){
+  el.classList.toggle('flipped');
+}
+
 // TIMELINE EXPAND
 function toggleTL(card){
-  var d=card.querySelector('.tl-details'),ic=card.querySelector('.tl-expand i');
+  var d=card.querySelector('.tl-details');
+  var ic=card.querySelector('.tl-expand i');
   if(!d)return;
   d.classList.toggle('open');
   if(ic)ic.style.transform=d.classList.contains('open')?'rotate(180deg)':'';
 }
 
-// 3D TILT (desktop only)
-if(window.innerWidth>768){
+// 3D TILT - desktop only
+if(!isMobile){
   var tw=document.getElementById('tiltWrap'),tc=document.getElementById('tiltCard');
   if(tw){
     tw.addEventListener('mousemove',function(e){
-      var r=tw.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      var r=tw.getBoundingClientRect();
+      var x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
       tc.style.transform='rotateY('+(x*16)+'deg) rotateX('+(-y*16)+'deg)';
     });
     tw.addEventListener('mouseleave',function(){tc.style.transform='rotateY(0) rotateX(0)';});
@@ -786,22 +924,49 @@ if(window.innerWidth>768){
 
 // SCROLL ANIMATIONS
 var obs=new IntersectionObserver(function(entries){
-  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});
+  entries.forEach(function(e){
+    if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}
+  });
 },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
 document.querySelectorAll('.sa').forEach(function(el){obs.observe(el);});
 window.addEventListener('load',function(){
   document.querySelectorAll('.sa').forEach(function(el){
-    if(el.getBoundingClientRect().top<window.innerHeight)el.classList.add('in');
+    if(el.getBoundingClientRect().top<window.innerHeight) el.classList.add('in');
   });
 });
 
 // SKILL BARS
 var skO=new IntersectionObserver(function(entries){
   entries.forEach(function(e){
-    if(e.isIntersecting){e.target.querySelectorAll('.sk-fill').forEach(function(b){b.style.width=b.getAttribute('data-w')+'%';});skO.unobserve(e.target);}
+    if(e.isIntersecting){
+      e.target.querySelectorAll('.sk-fill').forEach(function(b){b.style.width=b.getAttribute('data-w')+'%';});
+      skO.unobserve(e.target);
+    }
   });
 },{threshold:0.2});
 document.querySelectorAll('.skill-card').forEach(function(el){skO.observe(el);});
+
+// MOBILE TIMELINE: restructure grid for mobile
+function fixTimelineForMobile(){
+  if(window.innerWidth <= 768){
+    document.querySelectorAll('.tl-item').forEach(function(item){
+      item.style.gridTemplateColumns = '40px 1fr';
+    });
+    document.querySelectorAll('.tl-empty-left,.tl-empty-right').forEach(function(el){
+      el.style.display='none';
+    });
+    document.querySelectorAll('.tl-item.tl-right .tl-dot-wrap').forEach(function(el){
+      el.style.order='-1';
+    });
+    document.querySelectorAll('.tl-item.tl-right .tl-card').forEach(function(el){
+      el.style.order='1';
+      el.style.marginLeft='.5rem';
+      el.style.marginRight='0';
+    });
+  }
+}
+fixTimelineForMobile();
+window.addEventListener('resize',fixTimelineForMobile);
 </script>
 </body>
 </html>
